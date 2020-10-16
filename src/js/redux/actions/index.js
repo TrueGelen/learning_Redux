@@ -18,8 +18,8 @@ export function getAsyncPost() {
 					type: GET_ASYNC_POST,
 					payload: json
 				})
-
-			}, 500)
+				dispatch(hideLoader())
+			}, 300)
 		} catch (e) {
 			dispatch(showError("Не удалось получить данные с сервера"))
 			dispatch(hideLoader())
